@@ -25,7 +25,7 @@ public class Item {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1024)
     private String description;
 
     @Column(nullable = false)
@@ -36,9 +36,12 @@ public class Item {
     @Nullable
     private Byte[] image;
 
-    @JoinColumn(name = "cart_id",nullable = true,referencedColumnName = "id")
-    @OneToOne
-    private CartItem cart_id;
+    //mappedBy = "item"
+    /*
+    @OneToOne()
+    private CartItem cart;
+
+     */
 
 
     public Item(String name, String description, int price) {

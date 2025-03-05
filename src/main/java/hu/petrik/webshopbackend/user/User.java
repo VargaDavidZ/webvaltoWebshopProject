@@ -44,9 +44,13 @@ public class User implements UserDetails {
      */
 
     //orphanRemoval = true
-    @OneToMany(cascade = CascadeType.ALL)
+
+    /*
+    @OneToMany()
     private Set<CartItem> cartItems;
-    
+
+     */
+
     
 
     public User(String username, String email, String password, boolean admin) {
@@ -128,6 +132,9 @@ public class User implements UserDetails {
         this.admin = admin;
     }
 
+    /*
+
+
     public Set<CartItem> getCartItems() {
         return cartItems;
     }
@@ -135,4 +142,6 @@ public class User implements UserDetails {
     public void setCartItems(Set<CartItem> cartItems) {
         this.cartItems = cartItems;
     }
+
+     */
 }

@@ -29,12 +29,12 @@ public class CartItem {
 
 
     @JoinColumn(name = "item_id",nullable = false,referencedColumnName = "id")
-    @OneToOne
-    private Item item_id;
+    @OneToOne()
+    private Item item;
 
-    public CartItem(User user, int quantity, Item item_id) {
+    public CartItem(User user, int quantity, Item item) {
         this.user = user;
         this.quantity = quantity;
-        this.item_id = item_id;
+        this.item = item;
     }
 }
