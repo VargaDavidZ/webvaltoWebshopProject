@@ -1,0 +1,51 @@
+GET http://localhost:8080/users/10
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbCIsImVtYWlsIjoiZW1haWwiLCJleHAiOjE5NTcxNjgyMjh9.m940dbuJxYu-72RB2yuNO6V-ihKHAyU9-p8kF6autIU
+
+###
+PATCH http://localhost:8080/users/update/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbCIsImVtYWlsIjoiZW1haWwiLCJleHAiOjE5NTcxNjQyOTR9.iChOnSnjA_Et1jrBFLmKmXqg3WPwveckkpqNi2BotII
+
+{
+  "username": "new name",
+  "email": "new email"
+}
+
+###
+
+###
+
+DELETE http://localhost:8080/users/deleteUser/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbCIsImVtYWlsIjoiZW1haWwiLCJleHAiOjE5NTcxNjQyOTR9.iChOnSnjA_Et1jrBFLmKmXqg3WPwveckkpqNi2BotII
+###
+###
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+  "email": "email",
+  "password":"asd"
+}
+
+###
+
+
+###
+POST http://localhost:8080/users/register
+Content-Type: application/json
+
+{
+  "username": "David",
+  "email": "Email3",
+  "password": "testpass",
+  "admin": true
+}
+
+
+
+
+### GET request to example server
+GET http://localhost:8080/users
+
+###
