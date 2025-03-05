@@ -1,4 +1,4 @@
-GET http://localhost:8080/users/10
+GET http://localhost:8080/users/1
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbCIsImVtYWlsIjoiZW1haWwiLCJleHAiOjE5NTcxNjgyMjh9.m940dbuJxYu-72RB2yuNO6V-ihKHAyU9-p8kF6autIU
 
@@ -25,7 +25,7 @@ Content-Type: application/json
 
 {
   "email": "email",
-  "password":"asd"
+  "password":"admin"
 }
 
 ###

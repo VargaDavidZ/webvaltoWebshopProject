@@ -40,8 +40,8 @@ public class DataLoader implements CommandLineRunner {
         itemRepository.resetSequence();
         cartItemRepository.resetSequence();
 
-        User adminUser = createUser();
-        userRepository.save(adminUser);
+
+        userRepository.saveAll(createUser());
         User user = new User("admin","admin",passwordEncoder.encode("admin"),true);
         userRepository.save(user);
 
@@ -53,16 +53,20 @@ public class DataLoader implements CommandLineRunner {
 
     }
 
-    private static User createUser() {
-        User user = new User("admin","admin",passwordEncoder.encode("admin"),true);
-        User user1 = User.builder()
-                .username("username")
-                .email("email")
-                .password(passwordEncoder.encode("asd"))
-                .admin(true)
-                //.authorities("ROLE_ADMIN")
-                .build();
-        return user1;
+    private static ArrayList<User> createUser() {
+
+        ArrayList<User> users = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+             users.add(User.builder()
+                    .username("username" + i)
+                    .email("email" + i)
+                    .password(passwordEncoder.encode("asd" + i))
+                    .admin(false)
+                    //.authorities("ROLE_ADMIN")
+                    .build());
+        }
+
+        return users;
     }
 
     private static Item createItem() {
