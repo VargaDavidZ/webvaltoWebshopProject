@@ -43,6 +43,7 @@ public class User implements UserDetails {
 
      */
 
+    //orphanRemoval = true
     @OneToMany(cascade = CascadeType.ALL)
     private Set<CartItem> cartItems;
     

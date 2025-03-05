@@ -47,7 +47,7 @@ public class DataLoader implements CommandLineRunner {
 
         itemRepository.save(createItem());
 
-        User u = userRepository.findByEmail("email").get();
+        User u = userRepository.findByEmail("email0").get();
         Item item = itemRepository.findById(1L).get();
         cartItemRepository.save(new CartItem(u,10,item));
 
